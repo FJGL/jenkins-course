@@ -19,7 +19,7 @@ node {
 //      }
       def sonarqubeScannerHome = tool 'sonarqube'
       echo sonarqubeScannerHome
-      witSonarQubeEnv() {
+      withSonarQubeEnv() {
         sh "${sonarqubeScannerHome}/bin/sonar-scanner --version"
       }
     }
